@@ -4,9 +4,17 @@
     margin: 0px;
 }
 
+:root {
+    font-size: 2rem;
+    --big-font: 1.5rem;
+    --medium-font: 1rem;
+    --small-font: 0.8rem;
+    --main-background-color: rgba(0, 0, 0, 0.2);
+}
+
 body {
-    margin: 40px auto;
-    background-color: rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    background-color: var(--main-background-color);
 }
 
 .container {
@@ -14,9 +22,8 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: auto;
     padding: 40px;
-    background-color: lightgray;
+    background-color: white;
     line-height: 1.5;
-    border-radius: 10px;
     max-width: 90%;
 }
 
@@ -41,28 +48,38 @@ body {
 
 h1 {
     padding: 20px 0px;
+    font-size: var(--big-font);
+    background-color: var(--main-background-color);
+    margin: 40px -50px;
 }
 
 img {
     max-width: 100%;
     display: block;
-    margin: 20px auto;
+    margin: 40px auto;
 }
 
-.shadow {
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+.shadow-light {
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
 
-.border-img {
-    border: 1px solid black;
+h1,
+ul li a {
+    box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 
 h2 {
-    padding: 18px 0px;
+    padding: 15px;
+    font-size: var(--medium-font);
+    background-color: var(--main-background-color);
+    margin: 20px auto;
 }
 
 p {
     padding: 0px 20px;
+    font-size: var(--small-font);
 }
 
 ul,
@@ -84,4 +101,20 @@ ol {
 .animation {
     font-size: 50px;
     animation: rotate 2s linear 0s infinite;
+}
+
+ul li a {
+    background-color: var(--main-background-color);
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: black;
+}
+
+.nav li {
+    display: inline-block;
+    margin: 25px 15px;
+}
+
+a:active {
+    color: inherit;
 }
